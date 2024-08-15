@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    width: 160px;
+    background: url('background.jpg') no-repeat center center; 
+    background-size: cover; 
+}
+
+h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white; 
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: grey;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: green;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+#settingsIcon {
+    width: 24px; 
+    height: 24px;
+    cursor: pointer;
+}
+
+#settingsIcon:hover {
+    opacity: 0.7;
+}
+
+#settingsPanel {
+    display: none;
+    background: rgba(0, 0, 0, 0.8); 
+    padding: 10px;
+    border-radius: 10px; 
+}
+
+#settingsPanel.hidden {
+    display: none;
+}
+
+#settingsPanel:not(.hidden) {
+    display: block;
+}
+
+#settingsPanel label {
+    display: block;
+    margin-bottom: 5px;
+    color: white; 
+}
+
+#settingsPanel input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: none;
+}
+
+#saveSettingsBtn, #redirectBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px; 
+}
+
+#saveSettingsBtn:hover, #redirectBtn:hover {
+    background-color: #218838;
+}
+
+#redirectBtn {
+    background-color: #007bff; 
+}
+
+#redirectBtn:hover {
+    background-color: #0056b3;
+}
