@@ -1,12 +1,13 @@
 Инструкция по установке
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="left">СКАЧАТЬ</h3>
 <p align="left">
-<a href="your link" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg" alt="" height="30" width="40" /></a>
-<a href="your link" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/linkedin.svg" alt="" height="30" width="40" /></a>
-<a href="your link" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/instagram.svg" alt="" height="30" width="40" /></a>
-<a href="your link" target="blank"><img align="center" src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/youtube.svg" alt="" height="30" width="40" /></a>
+<a href="your link" target="blank"><img align="center" src="[https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/twitter.svg](https://github.com/user-attachments/assets/d0dc8dc7-5b83-476d-8fe8-cdaa0340e163)" alt="" height="30" width="40" /></a>
 </p>
+
+
+
+![download-downloading-laptop-svgrepo-com](https://github.com/user-attachments/assets/d0dc8dc7-5b83-476d-8fe8-cdaa0340e163)
 
 1. скачать и распокавать архив
 <img width="162" alt="Screenshot 2024-08-15 at 18 04 34" src="https://github.com/user-attachments/assets/b65d1b58-15e5-4b96-8a7d-f2fb4a365792">
