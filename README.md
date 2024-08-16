@@ -2,8 +2,8 @@
 
 <h3 align="left">СКАЧАТЬ</h3>
 <p align="left">
-<a href="your link" target="blank"><img align="center" src="https://github.com/user-attachments/assets/d0dc8dc7-5b83-476d-8fe8-cdaa0340e163" alt="" height="30" width="40" /></a>
-</p>
+<a href="https://github.com/shumilovsergey/proxy-frog/archive/refs/heads/main.zip" target="blank"><img align="center" src="https://github.com/user-attachments/assets/3bba1a8c-80ed-4f63-80df-62848055bc57" alt=""/></a>
+
 
 
 
