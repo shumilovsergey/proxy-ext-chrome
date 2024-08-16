@@ -1,11 +1,8 @@
 Инструкция по установке
 
-<h3 align="left">СКАЧАТЬ</h3>
 <p align="left">
-<a href="https://github.com/shumilovsergey/proxy-frog/archive/refs/heads/main.zip" target="blank"><img align="center" src="https://github.com/user-attachments/assets/90399ca7-e478-439c-abe1-fbc7eb4df494" alt=""/></a>
+<a href="https://github.com/shumilovsergey/proxy-frog/archive/refs/heads/main.zip" target="blank"><img align="center" src="https://github.com/user-attachments/assets/854f2d52-c2cc-4c1c-8fc4-3ed6f492b7a5" alt=""/></a>
 </p>
-
-
 
 1. скачать и распокавать архив
 <img width="162" alt="Screenshot 2024-08-15 at 18 04 34" src="https://github.com/user-attachments/assets/b65d1b58-15e5-4b96-8a7d-f2fb4a365792">
