@@ -1,6 +1,8 @@
 Инструкция по установке
 
+```markdown
 [Button Example]: https://img.shields.io/badge/Title-37a779?style=for-the-badge
+```
 
 1. скачать и распокавать архив
 <img width="162" alt="Screenshot 2024-08-15 at 18 04 34" src="https://github.com/user-attachments/assets/b65d1b58-15e5-4b96-8a7d-f2fb4a365792">
