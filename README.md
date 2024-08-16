@@ -10,7 +10,7 @@
 2. открыть менеджер расширений в хром браузере (chrome://extensions/) и включить "режим разработчика"
 <img width="191" alt="Screenshot 2024-08-15 at 18 07 01" src="https://github.com/user-attachments/assets/a8e41a77-5ce0-4389-b9d2-7a25bedc8691">
 
-3. указывае путь до папки из пункта 2
+3. указывае путь до папки из пункта 1
 <img width="155" alt="Screenshot 2024-08-15 at 18 09 57" src="https://github.com/user-attachments/assets/024ab6fc-be3b-49db-aab7-40075ee6224b">
 
 4. расширение успешно добавлено
