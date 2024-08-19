@@ -19,6 +19,6 @@
 6. ползунком включаем и выключаем прокси
 <img width="211" alt="Screenshot 2024-08-15 at 18 14 57" src="https://github.com/user-attachments/assets/267642ff-36c3-48f2-87a8-d5fef9bd6ac7">
 
-7. нажав на шестеренку можно указать прокси и порт (по дефолту уже настроен на мой прокси сервер) 
+7. нажав на шестеренку можно указать прокси и порт
 <img width="209" alt="Screenshot 2024-08-15 at 18 13 30" src="https://github.com/user-attachments/assets/151fd5c2-9bcf-48d3-97d5-eec64c1fcf75">
 
