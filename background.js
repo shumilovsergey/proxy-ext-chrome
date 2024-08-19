@@ -6,7 +6,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
             const url = new URL(activeTab.url);
             const hostname = url.hostname;
 
-            if (isEnabled && hostname.includes('youtube')) {
+            if (isEnabled && hostname.includes('tube')) {
                 chrome.proxy.settings.set(
                     { value: {
                         mode: 'fixed_servers',
