@@ -16,7 +16,7 @@
 4. расширение успешно добавлено
 <img width="426" alt="Screenshot 2024-08-15 at 18 11 15" src="https://github.com/user-attachments/assets/8e2b62f0-cb86-4ea4-a8ef-fc981055c2b1">
 
-6. нажав на шестеренку можно указать прокси и порт
+6. нажав на шестеренку можно указать прокси и порт (настройки на скриншоте не актуальны!) 
 <img width="209" alt="Screenshot 2024-08-15 at 18 13 30" src="https://github.com/user-attachments/assets/151fd5c2-9bcf-48d3-97d5-eec64c1fcf75">
 
 7. ползунком включаем и выключаем прокси
