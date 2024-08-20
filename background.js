@@ -1,32 +1,52 @@
-chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === 'toggleProxy') {
-        if (request.isEnabled) {
+        chrome.storage.sync.get(['proxyUrl', 'proxyPort'], function(data) {
+            if (request.isEnabled) {
+                const proxyConfig = {
+                    mode: "fixed_servers",
+                    rules: {
+                        singleProxy: {
+                            scheme: "http",
+                            host: data.proxyUrl || "mytube.sh-development.ru",
+                            port: parseInt(data.proxyPort) || 80
+                        },
+                        bypassList: []
+                    }
+                };
+                chrome.proxy.settings.set({ value: proxyConfig, scope: 'regular' }, function() {
+                    console.log('Proxy enabled');
+                });
+            } else {
+                chrome.proxy.settings.clear({ scope: 'regular' }, function() {
+                    console.log('Proxy disabled');
+                });
+            }
+        });
+    }
+});
 
-            const config = {
-                mode: 'pac_script',
-                pacScript: {
-                    data: `
-                        function FindProxyForURL(url, host) {
-                            if (dnsDomainIs(host, 'youtube.com') || 
-                                dnsDomainIs(host, 'www.youtube.com') || 
-                                dnsDomainIs(host, 'youtu.be')) {
-                                return 'PROXY ${request.proxyUrl}:${request.proxyPort}';
-                            }
-                            return 'DIRECT';
-                        }
-                    `
+// Initialize proxy setting based on stored value on extension load
+chrome.runtime.onStartup.addListener(function() {
+    chrome.storage.sync.get(['isEnabled', 'proxyUrl', 'proxyPort'], function(data) {
+        if (data.isEnabled) {
+            const proxyConfig = {
+                mode: "fixed_servers",
+                rules: {
+                    singleProxy: {
+                        scheme: "http",
+                        host: data.proxyUrl || "mytube.sh-development.ru",
+                        port: parseInt(data.proxyPort) || 80
+                    },
+                    bypassList: []
                 }
             };
-            chrome.proxy.settings.set(
-                { value: config, scope: 'regular' },
-                function() { console.log('Proxy settings updated for YouTube'); }
-            );
+            chrome.proxy.settings.set({ value: proxyConfig, scope: 'regular' }, function() {
+                console.log('Proxy enabled on startup');
+            });
         } else {
-
-            chrome.proxy.settings.set(
-                { value: { mode: 'direct' }, scope: 'regular' },
-                function() { console.log('Proxy disabled'); }
-            );
+            chrome.proxy.settings.clear({ scope: 'regular' }, function() {
+                console.log('Proxy disabled on startup');
+            });
         }
-    }
+    });
 });
