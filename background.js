@@ -1,33 +1,32 @@
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
     if (request.action === 'toggleProxy') {
-        const isEnabled = request.isEnabled;
-        chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-            const activeTab = tabs[0];
-            const url = new URL(activeTab.url);
-            const hostname = url.hostname;
+        if (request.isEnabled) {
 
-            if (isEnabled && hostname.includes('tube')) {
-                chrome.proxy.settings.set(
-                    { value: {
-                        mode: 'fixed_servers',
-                        rules: {
-                            singleProxy: {
-                                scheme: 'http',
-                                host: request.proxyUrl,
-                                port: parseInt(request.proxyPort)
-                            },
-                            bypassList: []
+            const config = {
+                mode: 'pac_script',
+                pacScript: {
+                    data: `
+                        function FindProxyForURL(url, host) {
+                            if (dnsDomainIs(host, 'youtube.com') || 
+                                dnsDomainIs(host, 'www.youtube.com') || 
+                                dnsDomainIs(host, 'youtu.be')) {
+                                return 'PROXY ${request.proxyUrl}:${request.proxyPort}';
+                            }
+                            return 'DIRECT';
                         }
-                    }, scope: 'regular' },
-                    function() {
-                        console.log('Proxy enabled for YouTube');
-                    }
-                );
-            } else {
-                chrome.proxy.settings.clear({ scope: 'regular' }, function() {
-                    console.log('Proxy disabled or not on YouTube');
-                });
-            }
-        });
+                    `
+                }
+            };
+            chrome.proxy.settings.set(
+                { value: config, scope: 'regular' },
+                function() { console.log('Proxy settings updated for YouTube'); }
+            );
+        } else {
+
+            chrome.proxy.settings.set(
+                { value: { mode: 'direct' }, scope: 'regular' },
+                function() { console.log('Proxy disabled'); }
+            );
+        }
     }
 });
